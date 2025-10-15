@@ -5,7 +5,7 @@ public class PetSelector{
 
     public static void main(String [] args){
         //get user input
-        //Valid inputs: Name must be English letters; color must be one and only one of the options (red. blue, green); season must be one and only one of the options (fall, winter, spring, summer)
+        //Valid inputs: Name must be English letters; color must be one and only one of the options (red. blue, green); season must be one and only one of the options (fall, winter, spring, summer). Color and season options have no space included. 
         //If you don't obey the valid inputs, you will have to press run again and put in a valid input
         //Based on the name, color, and season, the system will print out one and only one of the following: alligator, ostrich, giraffe, dog, panda, porcupine, ponies, axolotl, rock
         Scanner scanner = new Scanner(System.in);
@@ -13,13 +13,16 @@ public class PetSelector{
         String name = scanner.nextLine();
         System.out.print("Choose your favorite color from the options: red, blue, or green ");
         String color = scanner.nextLine();
+        //make sure it's valid
         if (color.indexOf("red") == 0 || color.indexOf("blue") == 0 || color.indexOf("green") == 0)
         {
 
             System.out.print("Choose your favorite season: fall, spring, winter, summer ");
             String season = scanner.nextLine();
+            //make sure it's valid
             if (season.indexOf("fall")==0 || season.indexOf("spring")==0 || season.indexOf("winter") == 0|| season.indexOf("summer")==0)
             {
+                //calculate the user's perfect PetSelector
                 if (color.indexOf("blue")==0 && season.indexOf("fall")  == 0)
                 {
                     System.out.print("alligator \n");
@@ -70,6 +73,4 @@ public class PetSelector{
         }
     }
 }
-        //make sure it's valid
-        //calculate the user's perfect PetSelector
         //output the decision
