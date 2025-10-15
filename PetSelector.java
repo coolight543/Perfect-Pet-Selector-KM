@@ -5,9 +5,9 @@ public class PetSelector{
 
     public static void main(String [] args){
         //get user input
-        //preconditon: Name must be English letters; color must be one and only one of the options (red. blue, green); season must be one and only one of the options (fall, winter, spring, summer)
-        //If you don't obey the preconditions, you will have to press run again and put in a valid input
-        //postcondition: Based on the name, color, and season, the system will print out one and only one of the following: alligator, ostrich, giraffe, dog, panda, porcupine, ponies, axolotl, rock
+        //Valid inputs: Name must be English letters; color must be one and only one of the options (red. blue, green); season must be one and only one of the options (fall, winter, spring, summer)
+        //If you don't obey the valid inputs, you will have to press run again and put in a valid input
+        //Based on the name, color, and season, the system will print out one and only one of the following: alligator, ostrich, giraffe, dog, panda, porcupine, ponies, axolotl, rock
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
@@ -70,11 +70,6 @@ public class PetSelector{
         }
     }
 }
-   
-      
-
-
         //make sure it's valid
         //calculate the user's perfect PetSelector
         //output the decision
-
