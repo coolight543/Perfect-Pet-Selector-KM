@@ -1,8 +1,13 @@
+//Kuang Miao 10/15/2025
+//This program will choose the best pet for the user based on their input for thier favorite color and season
 import java.util.*;
 public class PetSelector{
 
     public static void main(String [] args){
         //get user input
+        //preconditon: Name must be English letters; color must be one and only one of the options (red. blue, green); season must be one and only one of the options (fall, winter, spring, summer)
+        //If you don't obey the preconditions, you will have to press run again and put in a valid input
+        //postcondition: Based on the name, color, and season, the system will print out one and only one of the following: alligator, ostrich, giraffe, dog, panda, porcupine, ponies, axolotl, rock
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
@@ -17,7 +22,7 @@ public class PetSelector{
             {
                 if (color.indexOf("blue")==0 && season.indexOf("fall")  == 0)
                 {
-                    System.out.print("Alligator \n");
+                    System.out.print("alligator \n");
                 }
                 else if(color.indexOf("blue") == 0 && season.indexOf("spring") == 0)
                 {
@@ -48,17 +53,23 @@ public class PetSelector{
                 }
                 else if (name.indexOf("[AEIOUaeiou]") !=0 && color.indexOf("blue") ==0 && season.indexOf("winter") == 0)
                 {
-                    System.out.print("axolotl");
+                    System.out.print("axolotl\n");
                 }
                 else{
                     System.out.print("rock\n");
                 }
             }
+            else
+            {
+                System.out.print("Not a valid input, try again");
+            }
+        }
         else
         {
             System.out.print("Not a valid input, try again");
-
         }
+    }
+}
    
       
 
@@ -66,7 +77,4 @@ public class PetSelector{
         //make sure it's valid
         //calculate the user's perfect PetSelector
         //output the decision
-    }
-}
 
-}
