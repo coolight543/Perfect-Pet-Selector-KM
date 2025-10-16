@@ -31,7 +31,7 @@ public class PetSelector{
                 {
                     System.out.print("ostrich \n");
                 }
-                else if(color.indexOf("green") == 0 && season.indexOf("winter") == 0 && name.indexOf("[AEIOUaeiou]")!=0)
+                else if(color.indexOf("green") == 0 && season.indexOf("winter") == 0 && "AEIOUaeiou".indexOf(name.substring(0,1))==-1)
                 {
                     System.out.print("giraffe \n");
                 }
@@ -41,7 +41,7 @@ public class PetSelector{
                 }
                 else if(color.indexOf("red") == 0)
                 {
-                    if(name.indexOf("[AEIOUaeiou]")==0)
+                    if("AEIOUaeiou".indexOf(name.substring(0,1))!=-1)
                     {
                         System.out.print("porcupine\n");
                     }
